@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<link rel="stylesheet" href="style.css" type="text/css">   
+<script type="text/javascript" src="js.js"></script>   
+</head>
+ 
+<body>
+    <div id="sisaan" class="laatikko">  
+        <form name="alku" id="alku" action="#" method="POST" onsubmit="return fadeOut()">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Your name" min="3" max="30" required><br/>
+            <label for="age">Age</label>
+            <input type="number" name="age" placeholder="Your age" min="1" max="100" required><br/>
+            <label for="MyColor">Color of the Day</label>
+            <select name="MyColor" id="MyColor" size="1" onchange="vari()">
+                <option value="RED">RED</option>
+                <option value="YELLOW">YELLOW</option>
+                <option value="GREEN">GREEN</option>
+                <option value="BLUE">BLUE</option>
+                <option value="GRAY">GRAY</option>
+            </select>    
+            <input type="submit" class="submit" value="Next">
+        </form>
+    </div>
+    <div id="lisaa" class="laatikko">  
+        <form name="lisays" id="lisays" action="#" method="POST" onsubmit="return lisaaItem()">
+            <label for="addItem">New item</label>
+            <input type="text" name="addItem" placeholder="Add new item" id="newItem" min="3" max="30" required><br/>
+            <label for="amount">How many items</label>
+            <input type="number" name="amount" placeholder="Number of items" id="itemAmount" min="1" max="100" required><br/>
+            <label for="MyColor">Price estimate (EUR)</label>
+            <input type="number" step="0.01" name="amount" placeholder="Unit price estimate" id="itemPrice" min="0.01" max="10000" required><br/>
+            <input type="submit" class="submit" value="Add item to shopping list">
+        </form>
+        <p id="tavaraluku"> 0 items in shopping cart.</p>            
+    </div>        
+    <div id="ostoskori" class="laatikko">
+        <h3>Shopping List:</h3>
+        <table id="taulu">
+            <tr>
+                <th>ITEM</th>
+                <th>PIECES</th>
+                <th>PPU(€) </th>
+                <th>TOTAL(€) </th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
