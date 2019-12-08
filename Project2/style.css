@@ -1,0 +1,40 @@
+body {
+    background-color:grey;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://pixnio.com/free-images/2017/11/01/2017-11-01-17-01-32-1200x798.jpg')
+}
+input, select {
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+#laatikko{
+    width: 300px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: darkgray;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.napit {
+    margin: 5px;
+}
+@media only screen and (max-width: 700px) {
+    .laatikko{
+    width: 250px;
+    padding: 5px;
+    font-size: 0.85em;
+    }
+    input, select {
+    padding: 5px;
+    margin: 0;
+    }
+}
