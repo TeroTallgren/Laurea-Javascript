@@ -61,8 +61,8 @@ function haeCity() { //haetaan säätiedot hakukentän syötön perusteella
             let linkki = "http://openweathermap.org/img/wn/"+ikoni+"@2x.png";
             let temp = parseInt(obj.main.temp);
             let kosteus = obj.main.humidity;
-            document.getElementById("results").innerHTML = "<h3>" + obj.name + "</h3>";
-            document.getElementById("results").innerHTML += "<p>" + obj.weather[0].description +", "+temp+"C, kosteus: "+kosteus+"%</p><img src="+linkki+"><br>";
+            document.getElementById("tulos").innerHTML = "<h3>" + obj.name + "</h3>";
+            document.getElementById("tulos").innerHTML += "<p>" + obj.weather[0].description +", "+temp+"C, kosteus: "+kosteus+"%</p><img src="+linkki+"><br>";
         }
     }
 }
