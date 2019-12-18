@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Uskomaton Sää äppi</title>    
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="style.css" type="text/css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script type="text/javascript" src="js.js"></script>
+</head>
+ 
+<body>
+  <!--Sivun näytettävä sisältö laatikko divissä, jonka sisällä säätietojen hakua ja näyttöä varten oman divin sekä JQUERY-temppuja varten nappeja omassa diveissään-->
+    <div id="laatikko">
+        <div id="saa">  
+            <p>Valitse kaupunki luettelosta:</p>
+            <select id="kaupunki" onchange="haeSaa()">
+              <option value="" id="valinta" disabled selected></option>
+              <option value="Helsinki" >Helsinki</option>
+              <option value="Stockholm">Tukholma</option>
+              <option value="Rome">Rooma</option>
+              <option value="New York">New York</option>
+            </select>
+
+          <p>Tai kirjoita kaupungin nimi (englanniksi): </p>
+          <input id="haku"></input>
+          <button id="hae" class="napit" onclick="haeCity()">HAE!</button>
+          <div id="tulos"></div>
+          
+        </div>
+        <div id="toggle">
+            <button id="togglenappi" class="napit">PAINA TÄSTÄ JOS USKALLAT</button>
+        </div>
+        <div id="napit">
+            <button id="temppu" class="napit">PIILOTA SÄÄ</button>
+            <button id="temppu2" class="napit">TAKAISIN!</button>
+        </div>
+    </div>
+</body>
+ 
+</html>
